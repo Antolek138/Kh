@@ -1,0 +1,9 @@
+@use 'colors' as c;
+
+.nav__wrapper{
+    margin: 0 auto;
+    max-width: 1400px;
+    width: 100%;
+    left: 50%;
+    translate: -50% 0;
+}
