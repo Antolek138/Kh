@@ -18,7 +18,6 @@ body {
 	font-size: 1.6rem;
 	color: c.$white;
 	background-color: c.$black;
-	overflow: hidden;
 }
 
 .nav {
@@ -143,6 +142,31 @@ body {
 	}
 }
 
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    background-color: c.$darkblue;
+
+    &__text{
+        position: relative;
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            height: 5px;
+            width: 200px;
+            border-radius: 10px;
+            background-color: c.$white;
+            translate: -50% 0;
+        }
+    }
+}
+
 @media (min-width: 576px) {
 	.nav {
 		padding: 1em 2em;
@@ -242,4 +266,27 @@ body {
             }
 		}
 	}
+
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .info{
+        position: relative;
+        margin-top: -4em;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 1400px;
+        width: 80%;
+        border-radius: 10px;
+
+        &__text{
+            &::after{
+                width: 100%;
+            }
+        }
+    }
 }

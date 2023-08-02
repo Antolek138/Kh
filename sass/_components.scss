@@ -1,16 +1,20 @@
 @use 'colors' as c;
 
-.nav__wrapper{
-    margin: 0 auto;
-    max-width: 1400px;
-    width: 100%;
-    left: 50%;
-    translate: -50% 0;
+.nav__wrapper {
+	margin: 0 auto;
+	max-width: 1400px;
+	width: 100%;
+	left: 50%;
+	translate: -50% 0;
 }
 
-.wrapper{
-    margin: 0 auto;
-    max-width: 1400px;
-    width: 100%;
-    z-index: 2;
+.wrapper {
+	margin: 0 auto;
+	max-width: 1400px;
+	width: 100%;
+	z-index: 2;
+}
+
+.padding {
+	padding: 4em 0;
 }
