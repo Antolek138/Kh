@@ -6,6 +6,13 @@
   translate: -50% 0;
 }
 
+.wrapper {
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
+  z-index: 2;
+}
+
 *,
 *::after,
 *::before {
@@ -22,6 +29,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
+  color: #eeeeee;
   background-color: #292d32;
   overflow: hidden;
 }
@@ -35,13 +43,13 @@ body {
   top: 0;
   height: 60px;
   width: 100%;
+  z-index: 100;
 }
 .nav__logo {
   font-size: 2.8rem;
   font-weight: bold;
   text-decoration: none;
   color: #eeeeee;
-  z-index: 100;
 }
 .nav__menu {
   display: flex;
@@ -77,7 +85,6 @@ body {
   gap: 5px;
   height: 50px;
   width: 50px;
-  z-index: 100;
 }
 .nav__bars--active .nav__line:nth-child(1) {
   rotate: -45deg;
@@ -97,9 +104,53 @@ body {
   background-color: #eeeeee;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 45px;
+  padding: 0 1em;
+  height: 85vh;
+  position: relative;
+  background-image: url("../img/houseSmall.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(35, 55, 77, 0.6);
+}
+.header__title {
+  margin-top: 1.2em;
+  font-weight: normal;
+}
+.header__text {
+  margin: 2em 0;
+  width: 95%;
+}
+.header__offers {
+  padding: 0.5em 1em;
+  color: #eeeeee;
+  border-radius: 10px;
+  text-decoration: none;
+  background-color: #1089ff;
+}
+
 @media (min-width: 576px) {
   .nav {
     padding: 1em 2em;
+  }
+  .header__title {
+    width: 45%;
+  }
+  .header__text {
+    width: 65%;
   }
 }
 @media (min-width: 768px) {
@@ -113,6 +164,7 @@ body {
     gap: 25px;
     height: 100%;
     width: 50%;
+    translate: 0;
   }
   .nav__items {
     margin-bottom: 0;
@@ -130,9 +182,39 @@ body {
   .nav__bars {
     display: none;
   }
+  .header {
+    background-image: url("../img/house1200.jpg");
+  }
+  .header__title {
+    font-size: 6rem;
+    width: 65%;
+  }
+  .header__text, .header__offers {
+    font-size: 1.8rem;
+  }
 }
 @media (min-width: 992px) {
+  .nav {
+    padding: 0;
+  }
   .nav__menu {
     width: 40%;
+  }
+  .header {
+    background-position: 0 -250px;
+  }
+  .header__title {
+    width: 600px;
+  }
+  .header__text {
+    margin: 4em 0;
+    width: 580px;
+  }
+  .header__offers {
+    transition: color 0.3s, background-color 0.3s;
+  }
+  .header__offers:hover {
+    color: #1089ff;
+    background-color: #eeeeee;
   }
 }/*# sourceMappingURL=main.css.map */

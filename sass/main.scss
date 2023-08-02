@@ -16,6 +16,7 @@ html {
 body {
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.6rem;
+	color: c.$white;
 	background-color: c.$black;
 	overflow: hidden;
 }
@@ -29,13 +30,13 @@ body {
 	top: 0;
 	height: 60px;
 	width: 100%;
+	z-index: 100;
 
 	&__logo {
 		font-size: 2.8rem;
 		font-weight: bold;
 		text-decoration: none;
 		color: c.$white;
-		z-index: 100;
 	}
 
 	&__menu {
@@ -76,7 +77,6 @@ body {
 		gap: 5px;
 		height: 50px;
 		width: 50px;
-		z-index: 100;
 
 		&--active {
 			.nav__line:nth-child(1) {
@@ -101,9 +101,61 @@ body {
 	}
 }
 
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 45px;
+	padding: 0 1em;
+	height: 85vh;
+	position: relative;
+	background-image: url('../img/houseSmall.jpg');
+	background-size: cover;
+	background-position: center;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: c.$heroOne;
+	}
+
+	&__title {
+		margin-top: 1.2em;
+		font-weight: normal;
+	}
+
+	&__text {
+		margin: 2em 0;
+		width: 95%;
+	}
+
+	&__offers {
+		padding: 0.5em 1em;
+		color: c.$white;
+		border-radius: 10px;
+		text-decoration: none;
+		background-color: c.$blue;
+	}
+}
+
 @media (min-width: 576px) {
 	.nav {
 		padding: 1em 2em;
+	}
+
+	.header {
+		&__title {
+			width: 45%;
+		}
+
+		&__text {
+			width: 65%;
+		}
 	}
 }
 
@@ -120,6 +172,7 @@ body {
 			gap: 25px;
 			height: 100%;
 			width: 50%;
+			translate: 0;
 		}
 
 		&__items {
@@ -133,9 +186,9 @@ body {
 			&--contact {
 				padding: 0.5em 1em;
 
-                &:hover{
-                    background-color: c.$white;
-                }
+				&:hover {
+					background-color: c.$white;
+				}
 			}
 		}
 
@@ -143,12 +196,50 @@ body {
 			display: none;
 		}
 	}
+
+	.header {
+		background-image: url('../img/house1200.jpg');
+
+		&__title {
+			font-size: 6rem;
+			width: 65%;
+		}
+
+		&__text,
+		&__offers {
+			font-size: 1.8rem;
+		}
+	}
 }
 
 @media (min-width: 992px) {
-    .nav{
-        &__menu{
-            width: 40%;
-        }
-    }
+	.nav {
+		padding: 0;
+
+		&__menu {
+			width: 40%;
+		}
+	}
+
+	.header {
+		background-position: 0 -250px;
+
+		&__title {
+			width: 600px;
+		}
+
+		&__text {
+			margin: 4em 0;
+			width: 580px;
+		}
+
+		&__offers {
+			transition: color 0.3s, background-color 0.3s;
+
+            &:hover{
+                color: c.$blue;
+                background-color: c.$white;
+            }
+		}
+	}
 }
