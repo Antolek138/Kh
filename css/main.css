@@ -17,6 +17,23 @@
   padding: 4em 0;
 }
 
+.money-color {
+  color: #50c878;
+}
+
+.section-heading {
+  text-align: center;
+}
+.section-heading--title {
+  font-size: 2.4rem;
+  color: #292d32;
+}
+.section-heading--text {
+  margin-bottom: 1em;
+  font-size: 1.6rem;
+  color: #1089ff;
+}
+
 *,
 *::after,
 *::before {
@@ -119,6 +136,7 @@ body {
   background-image: url("../img/houseSmall.jpg");
   background-size: cover;
   background-position: center;
+  z-index: 5;
 }
 .header::after {
   content: "";
@@ -195,6 +213,83 @@ body {
   margin-top: 2em;
 }
 
+.property {
+  color: #292d32;
+  background-color: #eeeeee;
+}
+.property__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 4em;
+}
+.property__card {
+  width: 250px;
+  text-align: center;
+}
+.property__bottom {
+  padding: 0.5em 1em;
+  background-color: #d9d9d9;
+}
+.property__meters {
+  font-weight: bold;
+  text-align: right;
+}
+.property__title {
+  padding: 1em 2em;
+}
+.property__text {
+  margin-bottom: 1em;
+}
+.property__top {
+  position: relative;
+  width: 250px;
+  height: 150px;
+  background-size: cover;
+}
+.property__top--one {
+  background-image: url("../img/roomOne.jpg");
+}
+.property__top--two {
+  background-image: url("../img/roomTwo.jpg");
+}
+.property__top--three {
+  background-image: url("../img/roomThree.jpg");
+}
+.property__top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 45, 50, 0.5);
+}
+.property__status, .property__price {
+  position: absolute;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  font-size: 1.2rem;
+  color: #eeeeee;
+  border-radius: 10px;
+  z-index: 2;
+}
+.property__status {
+  top: 8%;
+  right: 8%;
+  background-color: #1089ff;
+}
+.property__status--sold {
+  background-color: #e91414;
+}
+.property__price {
+  bottom: 8%;
+  left: 8%;
+  background-color: rgba(16, 137, 255, 0.8);
+}
+
 @media (min-width: 576px) {
   .nav {
     padding: 1em 2em;
@@ -244,6 +339,10 @@ body {
   }
   .header__text, .header__offers {
     font-size: 1.8rem;
+  }
+  .property__cards {
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 }
 @media (min-width: 992px) {
@@ -319,8 +418,12 @@ body {
     background-color: #1473cf;
     z-index: 1;
   }
-  .about__title, .about i {
+  .about__title,
+  .about i {
     position: relative;
     z-index: 5;
+  }
+  .property {
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */

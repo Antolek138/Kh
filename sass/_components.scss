@@ -18,3 +18,22 @@
 .padding {
 	padding: 4em 0;
 }
+
+.money-color{
+	color: c.$green;
+}
+
+.section-heading{
+	text-align: center;
+
+	&--title{
+		font-size: 2.4rem;
+		color: c.$black;
+	}
+
+	&--text{
+		margin-bottom: 1em;
+		font-size: 1.6rem;
+		color: c.$blue;
+	}
+}
