@@ -426,4 +426,11 @@ body {
   .property {
     width: 100%;
   }
+  .property__card {
+    width: 350px;
+  }
+  .property__top {
+    height: 200px;
+    width: 350px;
+  }
 }/*# sourceMappingURL=main.css.map */

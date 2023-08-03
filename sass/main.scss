@@ -470,5 +470,14 @@ body {
 
 	.property{
 		width: 100%;
+
+		&__card{
+			width: 350px;
+		}
+
+		&__top{
+			height: 200px;
+			width: 350px;
+		}
 	}
 }
