@@ -449,7 +449,7 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		flex-wrap: wrap;
+		flex-direction: column;
 		gap: 80px;
 		padding: 4em 0;
 	}
@@ -568,6 +568,8 @@ body {
 		}
 
 		&__numbers {
+			flex-direction: row;
+			flex-wrap: wrap;
 			gap: 80px;
 			width: 100%;
 		}
