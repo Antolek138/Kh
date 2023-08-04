@@ -290,6 +290,57 @@ body {
   background-color: rgba(16, 137, 255, 0.8);
 }
 
+.house {
+  background-color: #d6d6d6;
+}
+.house__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 4em;
+}
+.house__card {
+  position: relative;
+  height: 250px;
+  width: 280px;
+  background-size: cover;
+}
+.house__card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 45, 50, 0.5);
+}
+.house__card--one {
+  background-image: url("../img/roomOne.jpg");
+}
+.house__card--two {
+  background-image: url("../img/roomTwo.jpg");
+}
+.house__card--three {
+  background-image: url("../img/roomThree.jpg");
+}
+.house__text-box {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+}
+.house__location {
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  background-color: rgba(16, 137, 255, 0.8);
+}
+
 @media (min-width: 576px) {
   .nav {
     padding: 1em 2em;
@@ -341,6 +392,10 @@ body {
     font-size: 1.8rem;
   }
   .property__cards {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .house__cards {
     flex-wrap: wrap;
     flex-direction: row;
   }
@@ -432,5 +487,12 @@ body {
   .property__top {
     height: 200px;
     width: 350px;
+  }
+  .house {
+    width: 100%;
+  }
+  .house__card {
+    height: 350px;
+    width: 380px;
   }
 }/*# sourceMappingURL=main.css.map */
