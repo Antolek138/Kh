@@ -421,6 +421,51 @@ body {
 	}
 }
 
+.kingHouse {
+	padding-bottom: 2em;
+	color: c.$black;
+	background-color: c.$white;
+
+	&__photos {
+		display: none;
+	}
+
+	&__title,
+	&__text {
+		text-align: center;
+	}
+
+	&__title {
+		padding: 4em 0;
+		font-size: 1.8rem;
+		font-weight: bold;
+	}
+
+	&__text {
+		padding: 0 0.8em;
+	}
+
+	&__numbers {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 80px;
+		padding: 4em 0;
+	}
+
+	&__num {
+		font-size: 2.2rem;
+		font-weight: bold;
+		color: c.$blue;
+	}
+
+	&__number-text {
+		margin-left: 0.3em;
+		font-weight: bold;
+	}
+}
+
 @media (min-width: 576px) {
 	.nav {
 		padding: 1em 2em;
@@ -503,11 +548,28 @@ body {
 		}
 	}
 
-	.workflow{
-		&__cards{
+	.workflow {
+		&__cards {
 			flex-wrap: wrap;
 			flex-direction: row;
 			gap: 100px;
+		}
+	}
+
+	.kingHouse {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+
+		&__text {
+			width: 500px;
+		}
+
+		&__numbers {
+			gap: 80px;
+			width: 100%;
 		}
 	}
 }
@@ -632,11 +694,81 @@ body {
 		}
 	}
 
-	.workflow{
+	.workflow {
 		width: 100%;
 
-		&__title{
+		&__title {
 			font-size: 2rem;
+		}
+	}
+
+	.kingHouse {
+		flex-wrap: wrap;
+		flex-direction: row;
+
+		&__textBox {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		&__title {
+			padding: 1em 0;
+			font-size: 4.8rem;
+			font-weight: normal;
+		}
+
+		&__text {
+			text-align: center;
+			margin-bottom: 2em;
+		}
+
+		&__photos {
+			display: flex;
+			align-self: flex-start;
+			order: 2;
+		}
+
+		&__photo {
+			width: 260px;
+			height: 450px;
+			background-size: cover;
+
+			&--one {
+				background-image: url('../img/photoOne.png');
+			}
+
+			&--two {
+				margin-left: 1em;
+				background-image: url('../img/photoTwo.png');
+			}
+		}
+
+		&__numbers {
+			order: 3;
+		}
+	}
+}
+
+@media (min-width: 1100px) {
+	.kingHouse {
+		&__title,
+		&__text {
+			text-align: left;
+		}
+
+		&__title {
+			align-self: flex-start;
+			width: 400px;
+		}
+
+		&__text {
+			padding: 0;
+		}
+
+		&__photos {
+			margin-left: 4em;
 		}
 	}
 }
