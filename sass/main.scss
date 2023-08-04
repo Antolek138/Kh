@@ -282,7 +282,7 @@ body {
 		right: 8%;
 		background-color: c.$blue;
 
-		&--sold{
+		&--sold {
 			background-color: c.$red;
 		}
 	}
@@ -294,10 +294,10 @@ body {
 	}
 }
 
-.house{
+.house {
 	background-color: c.$grayTwo;
 
-	&__cards{
+	&__cards {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -306,14 +306,14 @@ body {
 		margin-top: 4em;
 	}
 
-	&__card{
+	&__card {
 		position: relative;
 		height: 250px;
 		width: 280px;
 		background-size: cover;
 
-		&::after{
-			content:'';
+		&::after {
+			content: '';
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -322,20 +322,20 @@ body {
 			background-color: c.$heroTwo;
 		}
 
-		&--one{
+		&--one {
 			background-image: url('../img/roomOne.jpg');
 		}
 
-		&--two{
+		&--two {
 			background-image: url('../img/roomTwo.jpg');
 		}
 
-		&--three{
+		&--three {
 			background-image: url('../img/roomThree.jpg');
 		}
 	}
 
-	&__text-box{
+	&__text-box {
 		position: absolute;
 		bottom: 5%;
 		left: 5%;
@@ -345,11 +345,79 @@ body {
 		z-index: 1;
 	}
 
-	&__location{
+	&__location {
 		margin-bottom: 1em;
 		padding: 0.5em 1em;
 		border-radius: 10px;
 		background-color: c.$heroBlue;
+	}
+}
+
+.workflow {
+	background-color: c.$darkblue;
+
+	.section-heading {
+		&--title {
+			color: c.$white;
+		}
+	}
+
+	&__cards {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 150px;
+		margin-top: 6em;
+		text-align: center;
+	}
+
+	&__card {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__bloop {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 150px;
+		width: 150px;
+		background-color: c.$blue;
+
+		&--one {
+			border-radius: 30% 70% 70% 30% / 30% 27% 73% 70%;
+		}
+
+		&--two {
+			border-radius: 60% 40% 80% 20% / 14% 86% 14% 86%;
+		}
+
+		&--three {
+			border-radius: 89% 11% 92% 8% / 38% 55% 45% 62%;
+		}
+
+		&--four {
+			border-radius: 33% 67% 76% 24% / 100% 48% 52% 0%;
+		}
+	}
+
+	&__bloop-text {
+		font-size: 6.4rem;
+		font-weight: bold;
+	}
+
+	&__title {
+		margin: 2em 0;
+		font-size: 1.8rem;
+		font-weight: bold;
+	}
+
+	&__text {
+		width: 240px;
+		font-size: 1.4rem;
 	}
 }
 
@@ -421,17 +489,25 @@ body {
 		}
 	}
 
-	.property{
-		&__cards{
+	.property {
+		&__cards {
 			flex-wrap: wrap;
 			flex-direction: row;
 		}
 	}
 
-	.house{
+	.house {
+		&__cards {
+			flex-wrap: wrap;
+			flex-direction: row;
+		}
+	}
+
+	.workflow{
 		&__cards{
 			flex-wrap: wrap;
 			flex-direction: row;
+			gap: 100px;
 		}
 	}
 }
@@ -534,25 +610,33 @@ body {
 		}
 	}
 
-	.property{
+	.property {
 		width: 100%;
 
-		&__card{
+		&__card {
 			width: 350px;
 		}
 
-		&__top{
+		&__top {
 			height: 200px;
 			width: 350px;
 		}
 	}
 
-	.house{
+	.house {
 		width: 100%;
 
-		&__card{
+		&__card {
 			height: 350px;
 			width: 380px;
+		}
+	}
+
+	.workflow{
+		width: 100%;
+
+		&__title{
+			font-size: 2rem;
 		}
 	}
 }
