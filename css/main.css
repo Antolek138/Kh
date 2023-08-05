@@ -17,6 +17,14 @@
   padding: 5em 0;
 }
 
+.ml {
+  margin-left: 0.3em;
+}
+
+.name {
+  font-weight: bold;
+}
+
 .money-color {
   color: #50c878;
 }
@@ -433,6 +441,63 @@ body {
   font-weight: bold;
 }
 
+.references {
+  padding-bottom: 6em;
+  width: 100%;
+  background-color: #d6d6d6;
+}
+.references__desktop {
+  display: none;
+}
+.references .swiper {
+  position: relative;
+  margin-top: 6em;
+  height: 180px;
+  width: 280px;
+}
+.references .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #292d32;
+  background-color: #fff;
+}
+.references i {
+  position: absolute;
+  top: -10px;
+  left: 2%;
+  font-size: 4.2rem;
+}
+.references__text {
+  margin-top: 3em;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.references__textBox {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+  width: 100%;
+}
+.references__name {
+  margin-bottom: 1em;
+}
+.references__photos {
+  height: 84px;
+  width: 84px;
+  scale: 0.8;
+  background-size: cover;
+}
+.references__photos--one {
+  background-image: url("../img/people1.jpg");
+}
+.references__photos--two {
+  background-image: url("../img/people2.jpg");
+}
+.references__photos--three {
+  background-image: url("../img/people3.jpg");
+}
+
 @media (min-width: 576px) {
   .nav {
     padding: 1em 2em;
@@ -652,6 +717,47 @@ body {
   }
   .kingHouse__numbers {
     order: 3;
+  }
+  .references .swiper {
+    display: none;
+  }
+  .references__desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .references__desktop-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 240px;
+    width: 380px;
+    color: #292d32;
+    background-color: #fff;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .references__desktop-text {
+    margin-top: 3.2em;
+    text-align: center;
+  }
+  .references__desktop-box {
+    display: flex;
+    align-self: flex-start;
+    margin-top: 2em;
+    margin-left: 1.2em;
+  }
+  .references__desktop-textBox {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  .references i {
+    font-size: 4.8rem;
   }
 }
 @media (min-width: 1100px) {

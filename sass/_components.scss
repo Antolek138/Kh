@@ -19,19 +19,27 @@
 	padding: 5em 0;
 }
 
-.money-color{
+.ml {
+	margin-left: 0.3em;
+}
+
+.name {
+	font-weight: bold;
+}
+
+.money-color {
 	color: c.$green;
 }
 
-.section-heading{
+.section-heading {
 	text-align: center;
 
-	&--title{
+	&--title {
 		font-size: 2.4rem;
 		color: c.$black;
 	}
 
-	&--text{
+	&--text {
 		margin-bottom: 1em;
 		font-size: 1.6rem;
 		color: c.$blue;
