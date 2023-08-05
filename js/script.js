@@ -1,3 +1,30 @@
+const nav = document.querySelector('.nav')
+const logo = document.querySelector('.nav__logo')
+const bars = document.querySelector('.nav__bars')
+const menu = document.querySelector('.nav__menu')
+const navItems = document.querySelectorAll('.nav__items')
+const footerYear = document.querySelector('.footer__year')
+
+window.addEventListener('scroll', () => {
+	if (window.scrollY >= 50) {
+		nav.style.backgroundColor = 'rgb(0, 0, 0, 0.8)'
+	} else {
+		nav.style.backgroundColor = 'transparent'
+	}
+})
+
+const handleNav = () => {
+	menu.classList.toggle('nav__menu--active')
+	bars.classList.toggle('nav__bars--active')
+
+	navItems.forEach(item =>
+		item.addEventListener('click', () => {
+			menu.classList.remove('nav__menu--active')
+			bars.classList.remove('nav__bars--active')
+		})
+	)
+}
+
 const valueDisplay = document.querySelectorAll('.kingHouse__num')
 const interval = 4000
 
@@ -41,6 +68,16 @@ window.addEventListener('scroll', () => {
 	})
 })
 
+function logoClose() {
+	menu.classList.remove('nav__menu--active')
+	bars.classList.remove('nav__bars--active')
+}
+
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear()
+	footerYear.innerText = year
+}
+
 const swiper = new Swiper('.swiper', {
 	direction: 'horizontal',
 	loop: true,
@@ -55,3 +92,7 @@ const swiper = new Swiper('.swiper', {
 		slideShadows: false,
 	},
 })
+
+handleCurrentYear()
+bars.addEventListener('click', handleNav)
+logo.addEventListener('click', logoClose)

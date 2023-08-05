@@ -72,12 +72,14 @@ body {
   height: 60px;
   width: 100%;
   z-index: 100;
+  transition: background-color 0.3s;
 }
 .nav__logo {
   font-size: 2.8rem;
   font-weight: bold;
   text-decoration: none;
   color: #eeeeee;
+  z-index: 5;
 }
 .nav__menu {
   display: flex;
@@ -85,17 +87,19 @@ body {
   align-items: center;
   flex-direction: column;
   position: absolute;
-  top: 60px;
+  top: 0;
   left: 0;
   height: 100vh;
   width: 100%;
+  background-color: #1089ff;
   translate: -100% 0;
+  transition: translate 0.3s;
 }
 .nav__menu--active {
   translate: 0;
 }
 .nav__items {
-  margin-bottom: 4.5em;
+  margin-top: 2.5em;
   text-align: center;
   text-decoration: none;
   color: #eeeeee;
@@ -130,6 +134,7 @@ body {
   width: 30px;
   border-radius: 10px;
   background-color: #eeeeee;
+  transition: rotate 0.3s, translate 0.3s 0.1s, opacity 0.3s;
 }
 
 .header {
@@ -554,6 +559,85 @@ body {
   width: 100%;
 }
 
+.footer {
+  text-align: center;
+}
+.footer__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+}
+.footer__title {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.footer__text {
+  margin-top: 2em;
+  width: 250px;
+}
+.footer__social {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  margin-top: 1.5em;
+  font-size: 2.8rem;
+}
+.footer__social i {
+  transition: color 0.3s, background-color 0.3s;
+}
+.footer__social i:nth-child(1):hover {
+  color: #3b5998;
+}
+.footer__social i:nth-child(2):hover {
+  color: #25d366;
+}
+.footer__social i:nth-child(3):hover {
+  background: rgb(255, 220, 128);
+  background: linear-gradient(49deg, rgb(255, 220, 128) 0%, rgb(193, 53, 132) 77%, rgb(64, 93, 230) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footer__society {
+  margin-top: 4em;
+}
+.footer__society p {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.footer__society-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer__society-box a {
+  margin-top: 1em;
+  color: #eeeeee;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer__society-box a:hover {
+  color: #1089ff;
+}
+.footer__questions {
+  margin-top: 4em;
+}
+.footer__questions p:nth-child(1) {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.footer__locations {
+  margin-top: 2em;
+}
+.footer__bottom-text {
+  margin-top: 4em;
+  font-weight: bold;
+  font-size: 2.4rem;
+}
+
 @media (min-width: 576px) {
   .nav {
     padding: 1em 2em;
@@ -636,6 +720,12 @@ body {
   .middleman__cards {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .footer__box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 25px;
   }
 }
 @media (min-width: 992px) {
@@ -822,6 +912,9 @@ body {
   .middleman {
     width: 100%;
   }
+  .footer__box {
+    gap: 150px;
+  }
 }
 @media (min-width: 1100px) {
   .kingHouse__title, .kingHouse__text {
@@ -836,5 +929,8 @@ body {
   }
   .kingHouse__photos {
     margin-left: 4em;
+  }
+  .footer__box {
+    gap: 450px;
   }
 }/*# sourceMappingURL=main.css.map */
