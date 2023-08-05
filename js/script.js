@@ -2,13 +2,36 @@ const nav = document.querySelector('.nav')
 const logo = document.querySelector('.nav__logo')
 const bars = document.querySelector('.nav__bars')
 const menu = document.querySelector('.nav__menu')
+const overlayLeft = document.querySelector('.nav__overlay-left')
+const overlayRight = document.querySelector('.nav__overlay-right')
 const navItems = document.querySelectorAll('.nav__items')
 const footerYear = document.querySelector('.footer__year')
 
-window.addEventListener('scroll', () => {
+// window.addEventListener('scroll', function () {
+// 	const nav = document.querySelector('.nav')
+// 	if (window.scrollY >= 50) {
+// 		nav.classList.add('scrolled')
+// 	} else {
+// 		nav.classList.remove('scrolled')
+// 	}
+// })
+
+// window.addEventListener('scroll', () => {
+// 	if (window.scrollY >= 50) {
+// 		nav.style.backgroundColor = 'rgb(0, 0, 0, 0.8)'
+// 	} else {
+// 		nav.style.backgroundColor = 'transparent'
+// 	}
+// })
+
+window.addEventListener('scroll', function () {
 	if (window.scrollY >= 50) {
+		overlayLeft.classList.add('nav__overlay-left--left')
+		overlayRight.classList.add('nav__overlay-right--right')
 		nav.style.backgroundColor = 'rgb(0, 0, 0, 0.8)'
 	} else {
+		overlayLeft.classList.remove('nav__overlay-left--left')
+		overlayRight.classList.remove('nav__overlay-right--right')
 		nav.style.backgroundColor = 'transparent'
 	}
 })
