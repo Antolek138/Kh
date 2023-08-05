@@ -52,7 +52,7 @@ body {
 		width: 100%;
 		background-color: c.$blue;
 		translate: -100% 0;
-		transition: translate 0.3s ;
+		transition: translate 0.3s;
 
 		&--active {
 			translate: 0;
@@ -703,6 +703,11 @@ body {
 		margin-top: 4em;
 		font-weight: bold;
 		font-size: 2.4rem;
+	}
+
+	&__photoNumber {
+		color: c.$black;
+		text-decoration: none;
 	}
 }
 
