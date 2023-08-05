@@ -534,6 +534,72 @@ body {
 	}
 }
 
+.middleman {
+	padding-bottom: 6em;
+	background-color: c.$lightWhite;
+
+	&__cards {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 50px;
+		margin-top: 4em;
+	}
+
+	&__card {
+		position: relative;
+		height: 380px;
+		width: 300px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: c.$heroTwo;
+		}
+
+		&--one {
+			background-image: url('../img/b1.jpg');
+		}
+
+		&--two {
+			background-image: url('../img/b2.jpg');
+		}
+
+		&--three {
+			background-image: url('../img/b3.jpg');
+		}
+	}
+
+	&__name,
+	&__work {
+		position: absolute;
+		left: 50%;
+		font-weight: bold;
+		text-align: center;
+		translate: -50% 0;
+		z-index: 2;
+	}
+
+	&__name {
+		padding: 0.5em 1em;
+		bottom: 15%;
+		width: 160px;
+		color: c.$black;
+		border-radius: 10px;
+		background-color: c.$heroWhite;
+	}
+
+	&__work {
+		bottom: 5%;
+		width: 100%;
+	}
+}
+
 @media (min-width: 576px) {
 	.nav {
 		padding: 1em 2em;
@@ -640,6 +706,13 @@ body {
 			flex-wrap: wrap;
 			gap: 80px;
 			width: 100%;
+		}
+	}
+
+	.middleman {
+		&__cards {
+			flex-direction: row;
+			flex-wrap: wrap;
 		}
 	}
 }
@@ -868,6 +941,10 @@ body {
 		i {
 			font-size: 4.8rem;
 		}
+	}
+
+	.middleman {
+		width: 100%;
 	}
 }
 
