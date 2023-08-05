@@ -1,4 +1,5 @@
 const nav = document.querySelector('.nav')
+const body = document.querySelector('body')
 const logo = document.querySelector('.nav__logo')
 const bars = document.querySelector('.nav__bars')
 const menu = document.querySelector('.nav__menu')
@@ -7,31 +8,10 @@ const overlayRight = document.querySelector('.nav__overlay-right')
 const navItems = document.querySelectorAll('.nav__items')
 const footerYear = document.querySelector('.footer__year')
 
-// window.addEventListener('scroll', function () {
-// 	const nav = document.querySelector('.nav')
-// 	if (window.scrollY >= 50) {
-// 		nav.classList.add('scrolled')
-// 	} else {
-// 		nav.classList.remove('scrolled')
-// 	}
-// })
-
-// window.addEventListener('scroll', () => {
-// 	if (window.scrollY >= 50) {
-// 		nav.style.backgroundColor = 'rgb(0, 0, 0, 0.8)'
-// 	} else {
-// 		nav.style.backgroundColor = 'transparent'
-// 	}
-// })
-
 window.addEventListener('scroll', function () {
 	if (window.scrollY >= 50) {
-		overlayLeft.classList.add('nav__overlay-left--left')
-		overlayRight.classList.add('nav__overlay-right--right')
 		nav.style.backgroundColor = 'rgb(0, 0, 0, 0.8)'
 	} else {
-		overlayLeft.classList.remove('nav__overlay-left--left')
-		overlayRight.classList.remove('nav__overlay-right--right')
 		nav.style.backgroundColor = 'transparent'
 	}
 })
@@ -46,6 +26,16 @@ const handleNav = () => {
 			bars.classList.remove('nav__bars--active')
 		})
 	)
+}
+
+function blockedScreen() {
+	if (body.classList.contains('unlocked')) {
+		body.classList.remove('unlocked')
+		body.classList.add('locked')
+	} else if (body.classList.contains('locked')) {
+		body.classList.remove('locked')
+		body.classList.add('unlocked')
+	}
 }
 
 const valueDisplay = document.querySelectorAll('.kingHouse__num')
@@ -94,6 +84,8 @@ window.addEventListener('scroll', () => {
 function logoClose() {
 	menu.classList.remove('nav__menu--active')
 	bars.classList.remove('nav__bars--active')
+	body.classList.remove('locked')
+	body.classList.add('unlocked')
 }
 
 const handleCurrentYear = () => {
@@ -119,3 +111,4 @@ const swiper = new Swiper('.swiper', {
 handleCurrentYear()
 bars.addEventListener('click', handleNav)
 logo.addEventListener('click', logoClose)
+bars.addEventListener('click', blockedScreen)

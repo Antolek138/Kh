@@ -1,9 +1,21 @@
+.unlocked {
+  overflow: visible;
+}
+
+.locked {
+  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 .nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
   max-width: 1400px;
   width: 100%;
   left: 50%;
-  translate: -50% 0;
 }
 
 .wrapper {
@@ -71,11 +83,8 @@ body {
   top: 0;
   height: 60px;
   width: 100%;
-  z-index: 100;
   transition: background-color 0.3s;
-}
-.nav__overlay-left, .nav__overlay-right {
-  display: none;
+  z-index: 100;
 }
 .nav__logo {
   font-size: 2.8rem;
@@ -94,7 +103,7 @@ body {
   left: 0;
   height: 100vh;
   width: 100%;
-  background-color: #1089ff;
+  background-color: #23374d;
   translate: -100% 0;
   transition: translate 0.3s;
 }
@@ -740,23 +749,6 @@ body {
 @media (min-width: 992px) {
   .nav {
     padding: 0;
-  }
-  .nav__overlay-left, .nav__overlay-right {
-    position: absolute;
-    display: block;
-    top: 0;
-    height: 60px;
-    width: 100%;
-    transition: background-color 0.3s;
-  }
-  .nav__overlay-left--left, .nav__overlay-left--right, .nav__overlay-right--left, .nav__overlay-right--right {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  .nav__overlay-left--left, .nav__overlay-right--left {
-    left: -100%;
-  }
-  .nav__overlay-left--right, .nav__overlay-right--right {
-    right: -100%;
   }
   .nav__menu {
     width: 40%;

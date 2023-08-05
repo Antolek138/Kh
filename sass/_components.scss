@@ -1,11 +1,23 @@
 @use 'colors' as c;
 
+.unlocked {
+	overflow: visible;
+}
+
+.locked {
+	overflow: hidden;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
 .nav__wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	margin: 0 auto;
 	max-width: 1400px;
 	width: 100%;
 	left: 50%;
-	translate: -50% 0;
 }
 
 .wrapper {
