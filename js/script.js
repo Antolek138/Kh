@@ -24,6 +24,8 @@ const handleNav = () => {
 		item.addEventListener('click', () => {
 			menu.classList.remove('nav__menu--active')
 			bars.classList.remove('nav__bars--active')
+			body.classList.remove('locked')
+			body.classList.add('unlocked')
 		})
 	)
 }
