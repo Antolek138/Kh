@@ -71,7 +71,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   color: #eeeeee;
-  background-color: #292d32;
+  background-color: #1089ff;
 }
 
 .nav {
@@ -573,6 +573,7 @@ body {
 
 .footer {
   text-align: center;
+  background-color: #292d32;
 }
 .footer__box {
   display: flex;
@@ -653,6 +654,86 @@ body {
   margin-top: 4em;
   font-weight: bold;
   font-size: 2.4rem;
+}
+
+.service .section-heading {
+  margin-top: 3.5em;
+}
+.service .section-heading--text {
+  color: #292d32;
+}
+.service .section-heading--title {
+  color: #eeeeee;
+}
+.service__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 80px;
+  margin-bottom: 6em;
+}
+.service__card {
+  padding: 1em 2em;
+  width: 80%;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #23374d;
+}
+.service__title {
+  margin-bottom: 1em;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.service__text {
+  margin-bottom: 1.5em;
+}
+.service__contact {
+  font-family: "Poppins", sans-serif;
+  padding: 1em 2em;
+  position: relative;
+  height: 50px;
+  width: 180px;
+  border-radius: 10px;
+  border: none;
+  color: #eeeeee;
+  background-color: #292d32;
+  overflow: hidden;
+}
+.service__contact::after {
+  display: block;
+  position: absolute;
+  content: "";
+  transition: left 0.5s;
+  z-index: -1;
+}
+.service__contact::after {
+  height: 100%;
+  top: 0;
+  left: -10px;
+  border-left: 2px solid #eeeeee;
+}
+.service__contact::after:hover {
+  left: 300px;
+}
+.service__contact--one, .service__contact--two {
+  position: absolute;
+  top: 50%;
+  translate: -50% -50%;
+}
+.service__contact--one {
+  left: 50%;
+  transition: 0.5s;
+}
+.service__contact--two {
+  left: -50%;
+  transition: 0.3s;
+}
+.service__contact:hover .service__contact--one {
+  left: 150%;
+}
+.service__contact:hover .service__contact--two {
+  left: 50%;
 }
 
 @media (min-width: 576px) {
@@ -744,6 +825,15 @@ body {
     flex-wrap: wrap;
     align-items: baseline;
     gap: 25px;
+  }
+  .service__card {
+    width: 65%;
+  }
+  .service__title {
+    padding: 1em 2em;
+  }
+  .service__contact {
+    margin: 1.5em 0;
   }
 }
 @media (min-width: 992px) {
@@ -932,6 +1022,14 @@ body {
   }
   .footer__box {
     gap: 150px;
+  }
+  .service__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .service__card {
+    min-width: 350px;
+    width: 25%;
   }
 }
 @media (min-width: 1100px) {

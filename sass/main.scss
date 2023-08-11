@@ -17,7 +17,7 @@ body {
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.6rem;
 	color: c.$white;
-	background-color: c.$black;
+	background-color: c.$blue;
 }
 
 .nav {
@@ -607,6 +607,7 @@ body {
 
 .footer {
 	text-align: center;
+	background-color: c.$black;
 
 	&__box {
 		display: flex;
@@ -712,8 +713,106 @@ body {
 	}
 }
 
+//?=========
+//?OFFERS
+//?=========
+.service {
+	.section-heading {
+		margin-top: 3.5em;
 
+		&--text {
+			color: c.$black;
+		}
 
+		&--title {
+			color: c.$white;
+		}
+	}
+
+	&__cards {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 80px;
+		margin-bottom: 6em;
+	}
+
+	&__card {
+		padding: 1em 2em;
+		width: 80%;
+		text-align: center;
+		border-radius: 10px;
+		background-color: c.$darkblue;
+	}
+
+	&__title {
+		margin-bottom: 1em;
+		font-size: 1.8rem;
+		font-weight: bold;
+	}
+
+	&__text {
+		margin-bottom: 1.5em;
+	}
+
+	&__contact {
+		font-family: 'Poppins', sans-serif;
+		padding: 1em 2em;
+		position: relative;
+		height: 50px;
+		width: 180px;
+		border-radius: 10px;
+		border: none;
+		color: c.$white;
+		background-color: c.$black;
+		overflow: hidden;
+
+		&::after {
+			display: block;
+			position: absolute;
+			content: '';
+			transition: left 0.5s;
+			z-index: -1;
+		}
+
+		&::after {
+			height: 100%;
+			top: 0;
+			left: -10px;
+			border-left: 2px solid c.$white;
+		}
+
+		&::after:hover {
+			left: 300px;
+		}
+
+		&--one,
+		&--two {
+			position: absolute;
+			top: 50%;
+			translate: -50% -50%;
+		}
+
+		&--one {
+			left: 50%;
+			transition: 0.5s;
+		}
+
+		&--two {
+			left: -50%;
+			transition: 0.3s;
+		}
+
+		&:hover &--one {
+			left: 150%;
+		}
+
+		&:hover &--two {
+			left: 50%;
+		}
+	}
+}
 
 @media (min-width: 576px) {
 	.nav {
@@ -838,6 +937,23 @@ body {
 			flex-wrap: wrap;
 			align-items: baseline;
 			gap: 25px;
+		}
+	}
+
+	//?=========
+	//?OFFERS
+	//?=========
+	.service {
+		&__card {
+			width: 65%;
+		}
+
+		&__title {
+			padding: 1em 2em;
+		}
+
+		&__contact {
+			margin: 1.5em 0;
 		}
 	}
 }
@@ -1075,6 +1191,20 @@ body {
 	.footer {
 		&__box {
 			gap: 150px;
+		}
+	}
+
+	//?=========
+	//?OFFERS
+	//?=========
+	.service {
+		&__cards {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+		&__card {
+			min-width: 350px;
+			width: 25%;
 		}
 	}
 }
