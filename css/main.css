@@ -721,6 +721,71 @@ body {
   text-decoration: none;
 }
 
+.developer {
+  color: #292d32;
+  background-color: #d9d9d9;
+}
+.developer .section-heading--title {
+  color: #292d32;
+}
+.developer__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 6em;
+}
+.developer__card {
+  width: 80%;
+  text-align: center;
+  background-color: #eeeeee;
+}
+.developer__card-left {
+  position: relative;
+  height: 150px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.developer__card-left::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 45, 50, 0.5);
+}
+.developer__card-left--one {
+  background-image: url("../img/houseSmall.jpg");
+}
+.developer__card-left--two {
+  background-image: url("../img/houseSmall.jpg");
+}
+.developer__card-left--three {
+  background-image: url("../img/houseSmall.jpg");
+}
+.developer__card-left--four {
+  background-image: url("../img/houseSmall.jpg");
+}
+.developer__card-left--five {
+  background-image: url("../img/houseSmall.jpg");
+}
+.developer__card-right {
+  padding: 1em 2em;
+}
+.developer__card-title {
+  margin: 0.5em 0;
+  font-size: 1.6rem;
+}
+.developer__card-info {
+  font-size: 1.4rem;
+}
+.developer__card-rooms {
+  margin: 0.5em 0;
+}
+
 @media (min-width: 576px) {
   .nav {
     padding: 1em 2em;
@@ -815,6 +880,26 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 35px;
+  }
+  .developer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .developer__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1400px;
+  }
+  .developer__card {
+    max-width: 450px;
+  }
+  .developer__card-title {
+    font-size: 1.8rem;
+  }
+  .developer__card-info {
+    font-size: 1.6rem;
   }
 }
 @media (min-width: 992px) {
