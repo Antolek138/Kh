@@ -722,7 +722,7 @@ body {
 //?=========
 .service {
 	background-color: c.$gray;
-	
+
 	.section-heading {
 		margin-top: 3.5em;
 	}
@@ -876,6 +876,51 @@ body {
 
 	&__card-rooms {
 		margin: 0.5em 0;
+	}
+}
+
+.contact {
+	background-color: c.$black;
+
+	.section-heading {
+		margin-top: 2.5em;
+
+		&--title {
+			color: c.$white;
+		}
+
+		&--more {
+			margin-top: 1em;
+			padding: 1em 2em;
+			font-size: 1.4rem;
+		}
+	}
+
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 50px;
+		margin-top: 4em;
+		padding: 1em 2em;
+		text-align: center;
+	}
+
+	&__title {
+		font-size: 1.8rem;
+		margin-bottom: 1em;
+	}
+
+	&__phone {
+		p {
+			margin: 0.5em 0;
+		}
+	}
+
+	&__ph{
+		color: c.$white;
+		text-decoration: none;
 	}
 }
 
@@ -1038,6 +1083,19 @@ body {
 
 		&__card-info {
 			font-size: 1.6rem;
+		}
+	}
+
+	.contact{
+		.section-heading{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+
+			&--more{
+				width: 350px;
+			}
 		}
 	}
 }
