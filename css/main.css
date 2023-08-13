@@ -71,7 +71,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   color: #eeeeee;
-  background-color: #23374d;
+  background-color: #eeeeee;
 }
 
 .nav {
@@ -147,6 +147,9 @@ body {
   border-radius: 10px;
   background-color: #eeeeee;
   transition: rotate 0.3s, translate 0.3s 0.1s, opacity 0.3s;
+}
+.nav__dark {
+  background-color: rgba(0, 0, 0, 0.8) !important;
 }
 
 .header {
@@ -656,11 +659,11 @@ body {
   font-size: 2.4rem;
 }
 
+.service {
+  background-color: #d9d9d9;
+}
 .service .section-heading {
   margin-top: 3.5em;
-}
-.service .section-heading--title {
-  color: #eeeeee;
 }
 .service__cards {
   display: flex;
@@ -675,7 +678,7 @@ body {
   width: 90%;
   max-width: 300px;
   color: #292d32;
-  background-color: #d9d9d9;
+  background-color: #fff;
   overflow: hidden;
 }
 .service__card:hover .service__card-bottom {
@@ -704,7 +707,7 @@ body {
 }
 .service__card-bottom {
   padding: 1em 2em;
-  background-color: #d9d9d9;
+  background-color: #fff;
   translate: 0 1%;
   transition: translate 0.3s;
 }
@@ -723,7 +726,6 @@ body {
 
 .developer {
   color: #292d32;
-  background-color: #d9d9d9;
 }
 .developer .section-heading--title {
   color: #292d32;
@@ -739,7 +741,7 @@ body {
 .developer__card {
   width: 80%;
   text-align: center;
-  background-color: #eeeeee;
+  background-color: #d9d9d9;
 }
 .developer__card-left {
   position: relative;

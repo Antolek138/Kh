@@ -17,7 +17,7 @@ body {
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.6rem;
 	color: c.$white;
-	background-color: c.$darkblue;
+	background-color: c.$white;
 }
 
 .nav {
@@ -102,6 +102,10 @@ body {
 		border-radius: 10px;
 		background-color: c.$white;
 		transition: rotate 0.3s, translate 0.3s 0.1s, opacity 0.3s;
+	}
+
+	&__dark {
+		background-color: c.$heroService !important;
 	}
 }
 
@@ -717,12 +721,10 @@ body {
 //?OFFERS
 //?=========
 .service {
+	background-color: c.$gray;
+	
 	.section-heading {
 		margin-top: 3.5em;
-
-		&--title {
-			color: c.$white;
-		}
 	}
 
 	&__cards {
@@ -739,7 +741,7 @@ body {
 		width: 90%;
 		max-width: 300px;
 		color: c.$black;
-		background-color: c.$gray;
+		background-color: c.$wwhite;
 		overflow: hidden;
 
 		&:hover {
@@ -777,7 +779,7 @@ body {
 
 	&__card-bottom {
 		padding: 1em 2em;
-		background-color: c.$gray;
+		background-color: c.$wwhite;
 		translate: 0 1%;
 		transition: translate 0.3s;
 	}
@@ -800,7 +802,6 @@ body {
 
 .developer {
 	color: c.$black;
-	background-color: c.$gray;
 
 	.section-heading {
 		&--title {
@@ -820,7 +821,7 @@ body {
 	&__card {
 		width: 80%;
 		text-align: center;
-		background-color: c.$white;
+		background-color: c.$gray;
 	}
 
 	&__card-left {
